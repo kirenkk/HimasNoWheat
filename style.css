@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap');
+/* free Google font */
+
+/* global */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Crimson Text', serif;
+}
+
+/* header elements */
+.start {
+    background-image: url('Macarons.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    color: white;
+    height: 100vh;
+}
+
+.start h1 {
+    font-size: 6em;
+    font-family: 'Crimson Text', serif;
+}
+/*caption for macarons that will be visible on home, contact, and about */
+.image-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); 
+    color: white; /* text color */
+    background: rgba(0, 0, 0, 0.5); /*transparent background for better visibility */
+    padding: 5px 10px; 
+    font-size: 1.10em; /* looks best at 1 - 1.15 em, too big or small after that */
+}
+
+/* for navigation elements */
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: 'Crimson Text', serif;
+}
+
+/* product spotlight section */
+.spotlight {
+    text-align: center;
+    margin: 50px 0;
+    background-color: rgba(207, 206, 206, 0.85); /* grey background*/
+}
+
+.spotlight h2 {
+    font-size: 3em;
+    font-family: 'Crimson Text', serif;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.product {
+    width: 200px;
+    margin: 0 15px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.product p {
+    margin: 5px 0;
+    font-size: 1.2em;
+    font-family: 'Crimson Text', serif;
+}
+
+/*add a button below the section that matches the other ones (black) */
+.shop-button {
+    background-color: #000; /* black background */
+    color: #fff; /* white text */
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin: 20px auto;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    font-size: 1em;
+}
+
+/*subscription section */
+.subscription {
+    text-align: center;
+    margin: 50px 0;
+    background-color: rgba(207, 206, 206, 0.85); /* same grey as rest of page */
+    color: black;
+    padding: 40px 0;
+}
+
+.subscription h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    font-family: 'Crimson Text', serif;
+}
+
+.subscription-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.subscription-option {
+    width: 30%;
+    margin: 0 15px 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    color: black;
+    padding: 20px;
+    text-align: left;
+}
+
+.subscription-option img {
+    width: 75%;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    display: block;
+}
+
+.subscription-option h3 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+.subscription-option p {
+    font-size: 1.15em;
+    margin: 0 0 15px;
+}
+
+.subscription-option button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    display: block;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+/* adjustments, CHANGE LATER maybe? */
+@media (max-width: 1200px) {
+    .subscription-option {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .subscription-option {
+        width: 90%;
+    }
+}
+/* This section is on the actual homepage, the one with the learn more button. NOT THE EXTERNAL LINK. */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(207, 206, 206, 0.85); /*  grey background */
+    color: black; /*same text as spotlight section */
+    padding: 40px 0;
+    text-align: left;
+}
+
+.about-text {
+    max-width: 600px;
+}
+/*/CHANGE LATER maybe ,  sizes if needed*/
+    .about-text h2 {
+        font-size: 2.5em; 
+        margin-bottom: 0.5em;
+        font-family: 'Crimson Text', serif;
+    }
+
+    .about-text p {
+        font-size: 1.25em; 
+        margin-bottom: 1em;
+    }
+
+.learn-more-button {
+    background-color: #000; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 1.25em;
+}
+
+.about-image {
+    
+}
+
+    .about-image img {
+        max-width: 100%; 
+        height: auto; /*  aspect ratio */
+    }
+
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about-text, .about-image {
+        width: 90%;
+        margin: 0 auto; 
+    }
+
+    .about-image {
+        margin-bottom: 20px;
+    }
+}
+/*This is for the actual external ABOUT section with the John Hopkins link, etc.*/
+.extabout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(207, 206, 206, 0.85); /* grey background */
+    color: black; /* black text */
+    padding: 20px;
+}
+
+.extabout-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* adjusted for spacing */
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
+}
+
+.extabout-image {
+    flex: 1;
+    margin-right: 60px; 
+    max-width: 550px;
+    height: auto;
+}
+
+.extabout-content {
+    flex: 1;
+    font-size: 4rem; 
+    margin-left: 60px;
+    padding-right: 20px; 
+}
+
+@media (max-width: 768px) {
+    .extabout-wrapper {
+        flex-direction: column;
+    }
+
+    .extabout-image,
+    .extabout-content {
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .extabout-content {
+        font-size: 1.5rem;
+        padding-right: 10px; 
+    }
+}
+/*contact submission form styles below*/
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.contact-info, .contact-form {
+    flex-basis: 48%; 
+}
+
+.contact-form {
+    background: rgba(207, 206, 206, 0.85); 
+    padding: 20px;
+    border-radius: 8px; 
+}
+
+.contact-info h2, .contact-info p {
+    font-size: 1.5em; 
+}
+
+.input-group {
+    margin-bottom: 15px; 
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; 
+    padding: 10px;
+    margin-top: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+    font-size: 1em; 
+}
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #7eadf0; 
+    }
+
+button[type="submit"] {
+    background-color: #000; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin: 20px 0; 
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    font-size: 1em; 
+}
+
+    button[type="submit"]:hover {
+        background-color: #333; 
+    }
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        flex-basis: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* footer, ADJUST LATER */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+}
